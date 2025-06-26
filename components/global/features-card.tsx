@@ -38,7 +38,7 @@ const grid = [
   {
     title: "Precision Crop Monitoring and Disease Detection",
     description:
-      "Our drone watches crops from the sky, using AI to detect pests, diseases, and plant stress early—before it’s too late.",
+      "Our drone watches crops from the sky, using AI to detect pests, diseases, and plant stress early—before it's too late.",
   },
   {
     title: "Scalability and Autonomous Operation",
@@ -77,7 +77,7 @@ export const Grid = ({
   );
 };
 
-export function GridPattern({ width, height, x, y, squares, ...props }: any) {
+export function GridPattern({ width, height, x, y, squares, ...props }: { width: number; height: number; x: number; y: number; squares: unknown[]; [key: string]: unknown }) {
   const patternId = useId();
 
   return (
@@ -102,7 +102,7 @@ export function GridPattern({ width, height, x, y, squares, ...props }: any) {
       />
       {squares && (
         <svg x={x} y={y} className="overflow-visible">
-          {squares.map(([x, y]: any) => (
+          {squares.map(([x, y]: [number, number]) => (
             <rect
               strokeWidth="0"
               key={`${x}-${y}`}

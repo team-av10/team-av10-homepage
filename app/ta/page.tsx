@@ -6,10 +6,7 @@ import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { LampComponent } from "@/components/global/Lamp-ta";
 import Navbar from "@/components/global/Navbar";
 import { ExpandableCardDemo } from "@/components/global/our-team-component-ta";
-import { FooterComp } from "@/components/global/footer-comp";
-import { Button } from "@/components/ui/button";
 import { clients, products } from "@/lib/constant";
-import Image from "next/image";
 import Documentation from "./Documentation";
 
 export default function Home() {
@@ -23,7 +20,7 @@ export default function Home() {
         titleComponent ={
           <div className="flex items-center flex-col">
           <h1 className="text-5xl md:text-7xl mb-7 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold animate-slide-in-up">
-          விவசாயத்திற்கு வான் கண்கள்
+          விவசாயத்திற்கு வான் கண்காணிப்புகள்
           </h1>
         </div>
         }
@@ -49,7 +46,7 @@ export default function Home() {
       <FeaturesCard/>
     </section>
     <section className="mt-[-200px]">
-    <AceHeading title="எங்கள் பயணத்துடன் இருப்பவர்கள்"/>
+    <AceHeading title="எங்கள் பயனத்துடன் இருப்பவர்கள்"/>
     </section>
     <section className="mt-[-150px]">
       <ExpandableCardDemo/>

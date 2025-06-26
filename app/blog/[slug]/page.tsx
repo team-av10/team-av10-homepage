@@ -3,6 +3,7 @@ import { PortableText } from '@/components/ui/portable-text'
 import { Clock, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 
 interface Post {
   _id: string
@@ -54,10 +55,12 @@ export default async function BlogPostPage({ params }: Props) {
 
             {post.thumbnail && (
               <div className="relative h-96 rounded-xl overflow-hidden mb-8">
-                <img
+                <Image
                   src={urlFor(post.thumbnail).url()}
                   alt={post.title}
                   className="w-full h-full object-cover"
+                  fill
+                  sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
@@ -78,10 +81,12 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {post.additionalImages.map((image, index) => (
                   <div key={index} className="rounded-lg overflow-hidden">
-                    <img
+                    <Image
                       src={urlFor(image).url()}
                       alt={`${post.title} - Image ${index + 1}`}
                       className="w-full h-auto"
+                      width={800}
+                      height={600}
                     />
                   </div>
                 ))}

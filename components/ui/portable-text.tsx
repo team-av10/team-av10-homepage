@@ -5,7 +5,7 @@ import { urlFor } from '@/lib/sanity'
 
 const components = {
   types: {
-    image: ({ value }: any) => {
+    image: ({ value }: { value: unknown }) => {
       return (
         <div className="my-8">
           <img
@@ -23,29 +23,29 @@ const components = {
     },
   },
   block: {
-    h1: ({ children }: any) => (
+    h1: ({ children }: { children: React.ReactNode }) => (
       <h1 className="text-3xl font-bold mb-4 mt-8">{children}</h1>
     ),
-    h2: ({ children }: any) => (
+    h2: ({ children }: { children: React.ReactNode }) => (
       <h2 className="text-2xl font-bold mb-3 mt-6">{children}</h2>
     ),
-    h3: ({ children }: any) => (
+    h3: ({ children }: { children: React.ReactNode }) => (
       <h3 className="text-xl font-bold mb-2 mt-4">{children}</h3>
     ),
-    normal: ({ children }: any) => (
+    normal: ({ children }: { children: React.ReactNode }) => (
       <p className="mb-4 leading-relaxed">{children}</p>
     ),
   },
   list: {
-    bullet: ({ children }: any) => (
+    bullet: ({ children }: { children: React.ReactNode }) => (
       <ul className="list-disc list-inside mb-4 space-y-1">{children}</ul>
     ),
-    number: ({ children }: any) => (
+    number: ({ children }: { children: React.ReactNode }) => (
       <ol className="list-decimal list-inside mb-4 space-y-1">{children}</ol>
     ),
   },
 }
 
-export function PortableText({ value }: { value: any }) {
+export function PortableText({ value }: { value: unknown }) {
   return <PortableTextComponent value={value} components={components} />
 } 

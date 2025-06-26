@@ -85,7 +85,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                   enable: false,
                   mode: 'repulse',
                 },
-                resize: true as any,
+                resize: true as boolean,
               },
               modes: {
                 push: {
@@ -162,7 +162,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 close: true,
                 fill: true,
                 options: {},
-                type: {} as any,
+                type: {} as unknown,
               },
               groups: {},
               move: {

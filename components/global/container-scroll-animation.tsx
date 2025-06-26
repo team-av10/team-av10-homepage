@@ -8,7 +8,7 @@ export const ContainerScroll = ({
 }: {
   titleComponent: string | React.ReactNode
 }) => {
-  const containerRef = useRef<any>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
   })
@@ -58,7 +58,7 @@ export const ContainerScroll = ({
   )
 }
 
-export const Header = ({ translate, titleComponent }: any) => {
+export const Header = ({ translate, titleComponent }: { translate: unknown; titleComponent: React.ReactNode }) => {
   return (
     <motion.div
       style={{
@@ -76,9 +76,9 @@ export const Card = ({
   scale,
   translate,
 }: {
-  rotate: any
-  scale: any
-  translate: any
+  rotate: unknown
+  scale: unknown
+  translate: unknown
 }) => {
   return (
     <motion.div

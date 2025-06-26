@@ -1,12 +1,9 @@
 import { AceHeading } from '@/components/global/ace-heading'
 import { DocCard3d } from '@/components/global/doc-card-3d'
-import { FooterComp } from '@/components/global/footer-comp'
 import Navbar from '@/components/global/Navbar'
 import React from 'react'
 
-type Props = {}
-
-const Documentation = (props: Props) => {
+const Documentation = () => {
   return (
    <main>
     <Navbar/>

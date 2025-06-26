@@ -6,10 +6,7 @@ import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { LampComponent } from "@/components/global/Lamp-hi";
 import Navbar from "@/components/global/Navbar";
 import { ExpandableCardDemo } from "@/components/global/our-team-component-hi";
-import { FooterComp } from "@/components/global/footer-comp";
-import { Button } from "@/components/ui/button";
 import { clients, products } from "@/lib/constant";
-import Image from "next/image";
 import Documentation from "./Documentation";
 
 export default function Home() {

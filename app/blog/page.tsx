@@ -1,6 +1,7 @@
 import { client, postQuery, urlFor } from '@/lib/sanity'
 import Link from 'next/link'
 import { Clock, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 interface Post {
   _id: string
@@ -41,10 +42,12 @@ export default async function BlogPage() {
               >
                 {post.thumbnail && (
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={urlFor(post.thumbnail).url()}
                       alt={post.title}
                       className="w-full h-full object-cover"
+                      fill
+                      sizes="100vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   </div>
