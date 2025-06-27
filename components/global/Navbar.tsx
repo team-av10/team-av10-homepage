@@ -6,9 +6,7 @@ import React, { useState, useEffect } from 'react'
 import { MenuIcon, X } from 'lucide-react'
 import { useOutsideClick } from '@/hooks/use-outside-click'
 
-type Props = {}
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const mobileMenuRef = useOutsideClick(() => setIsMobileMenuOpen(false))
 

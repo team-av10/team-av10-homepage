@@ -1,10 +1,10 @@
 'use client'
-import type { NextPage } from 'next'
+// import type { NextPage } from 'next'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
-import type { Container, Engine } from '@tsparticles/engine'
 import { loadSlim } from '@tsparticles/slim'
+import type { Container } from '@tsparticles/engine'
 
 import { motion, useAnimation } from 'framer-motion'
 import { cn } from '@/lib/utils'
@@ -85,7 +85,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                   enable: false,
                   mode: 'repulse',
                 },
-                resize: true as boolean,
+                resize: {},
               },
               modes: {
                 push: {
@@ -162,7 +162,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 close: true,
                 fill: true,
                 options: {},
-                type: {} as unknown,
+                type: 'circle',
               },
               groups: {},
               move: {

@@ -4,7 +4,7 @@ import { ContainerScroll } from "@/components/global/container-scroll-animation"
 import { FeaturesCard } from "@/components/global/features-card-hi";
 import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { LampComponent } from "@/components/global/Lamp-hi";
-import Navbar from "@/components/global/Navbar";
+
 import { ExpandableCardDemo } from "@/components/global/our-team-component-hi";
 import { clients, products } from "@/lib/constant";
 import Documentation from "./Documentation";

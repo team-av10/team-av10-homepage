@@ -4,7 +4,6 @@ import { ContainerScroll } from "@/components/global/container-scroll-animation"
 import { FeaturesCard } from "@/components/global/features-card";
 import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { LampComponent } from "@/components/global/Lamp";
-import Navbar from "@/components/global/Navbar";
 import { ExpandableCardDemo } from "@/components/global/our-team-component";
 import { clients, products } from "@/lib/constant";
 import Documentation from "./Documentation";
@@ -20,7 +19,7 @@ export default function Home() {
         titleComponent ={
           <div className="flex items-center flex-col">
           <h1 className="text-5xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold animate-slide-in-up">
-          Harvesting Tomorrow’s Insights
+          Harvesting Tomorrow&apos;s Insights
           </h1>
         </div>
         }

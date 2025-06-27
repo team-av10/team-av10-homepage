@@ -51,10 +51,10 @@ export const Grid = ({
   pattern,
   size,
 }: {
-  pattern?: number[][];
+  pattern?: [number, number][];
   size?: number;
 }) => {
-  const p = pattern ?? [
+  const p: [number, number][] = pattern ?? [
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
@@ -67,8 +67,8 @@ export const Grid = ({
         <GridPattern
           width={size ?? 20}
           height={size ?? 20}
-          x="-12"
-          y="4"
+          x={-12}
+          y={4}
           squares={p}
           className="absolute inset-0 h-full w-full  mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
         />
@@ -77,7 +77,7 @@ export const Grid = ({
   );
 };
 
-export function GridPattern({ width, height, x, y, squares, ...props }: { width: number; height: number; x: number; y: number; squares: unknown[]; [key: string]: unknown }) {
+export function GridPattern({ width, height, x, y, squares, ...props }: { width: number; height: number; x: number; y: number; squares: [number, number][]; [key: string]: unknown }) {
   const patternId = useId();
 
   return (

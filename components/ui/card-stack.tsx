@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-let interval: unknown;
+let interval: ReturnType<typeof setInterval>;
 
 type Card = {
   id: number;
