@@ -65,9 +65,9 @@ const Navbar = () => {
             <li>
               <Link href="/ta">தமிழ்</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/blog" className="text-purple-400 hover:text-purple-300 transition-colors">Blog</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         
@@ -147,7 +147,7 @@ const Navbar = () => {
                       தமிழ்
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/blog"
                       onClick={closeMobileMenu}
@@ -155,7 +155,7 @@ const Navbar = () => {
                     >
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
 
